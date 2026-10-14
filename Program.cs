@@ -12,7 +12,7 @@ class Program
            - Compter le nombre total de coffres inspectés.
         */
 
-        int totalChests = 0;
+        /* int totalChests = 0;
         for (int wagon = 1; wagon <= 4; wagon++)
         {
             for (int chest = 1; chest <= 3; chest++)
@@ -24,6 +24,7 @@ class Program
                 Console.ReadLine();
             }
         }
+        */
 
         /* Exemple :
                Inspection des 4 wagons du train
@@ -35,7 +36,32 @@ class Program
                Total : 12 coffres inspectés.
             
             BONUS 1 : permettre à l'utilisateur de choisir le nombre de wagons
-            BONUS 2 : enregistrer l'ensemble du butin trouvé et l'afficher à la fin
-         */
+        */
+
+        int totalChests = 0;
+        Console.WriteLine("Combien de wagons?");
+        int totalWagons = Convert.ToInt32(Console.ReadLine());
+        for (int wagon = 1; wagon <= totalWagons; wagon++)
+        {
+            for (int chest = 1; chest <= 3; chest++)
+            {
+                totalChests = (totalChests + 1);
+                Console.WriteLine("Wagon " + wagon + " - Coffre " + chest + " inspecté");
+                Console.WriteLine(totalChests + "/" + (totalWagons * 3) + " coffres inspectés.");
+                Console.WriteLine(" ");
+                Console.ReadLine();
+            }
+        }
+
+        /* BONUS 2 : enregistrer l'ensemble du butin trouvé et l'afficher à la fin
+        */
+
+        for (int i = 1; i <= 5; i++)
+        {
+            Console.WriteLine(" ");
+        }
+        Console.WriteLine("End!");
+        Console.WriteLine(totalChests + " coffres collectés.");
+        Console.WriteLine(totalWagons + " wagons explorés.");
     }
 }
