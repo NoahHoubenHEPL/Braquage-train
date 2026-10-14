@@ -10,8 +10,22 @@ class Program
            - Utiliser une deuxième boucle à l'intérieur pour parcourir les trois coffres de chaque wagon.
            - Afficher chaque coffre inspecté avec son numéro de wagon.
            - Compter le nombre total de coffres inspectés.
-           
-           Exemple :
+        */
+
+        int totalChests = 0;
+        for (int wagon = 1; wagon <= 4; wagon++)
+        {
+            for (int chest = 1; chest <= 3; chest++)
+            {
+                totalChests = (totalChests + 1);
+                Console.WriteLine("Wagon " + wagon + " - Coffre " + chest + " inspecté");
+                Console.WriteLine(totalChests + "/12 coffres inspectés.");
+                Console.WriteLine(" ");
+                Console.ReadLine();
+            }
+        }
+
+        /* Exemple :
                Inspection des 4 wagons du train
                Wagon 1 - Coffre 1 inspecté
                Wagon 1 - Coffre 2 inspecté
